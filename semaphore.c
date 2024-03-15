@@ -2,6 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+Instituto Tecnológico de Costa Rica | Ing. Computación
+
+Sistemas Operativos - Tarea #2
+
+Elaborado Por:
+Adrián Herrera
+Rebeca Madrigal
+Ronaldo Vindas
+
+*/
+
 typedef struct {
     pthread_mutex_t mutex;
     pthread_cond_t condition;
@@ -37,7 +49,6 @@ void* thread_function(void* arg) {
     semaphore_wait(sem);
 
     printf("Thread acquired the semaphore\n");
-    // Perform some critical section or shared resource access here
 
     printf("Thread releasing the semaphore\n");
     semaphore_signal(sem);
@@ -47,20 +58,17 @@ void* thread_function(void* arg) {
 
 int main() {
     semaphore sem;
-    semaphore_init(&sem, 1); // Initialize the semaphore with initial value 1
+    semaphore_init(&sem, 1);
 
     pthread_t thread;
     pthread_create(&thread, NULL, thread_function, (void*)&sem);
 
-    // Main thread also performs some work
     printf("Main thread performing some work\n");
 
-    // Main thread waits for the semaphore
     printf("Main thread waiting\n");
     semaphore_wait(&sem);
 
     printf("Main thread acquired the semaphore\n");
-    // Perform some critical section or shared resource access here
 
     printf("Main thread releasing the semaphore\n");
     semaphore_signal(&sem);

@@ -17,19 +17,15 @@ Ronaldo Vindas
 
 */
 
-// Definición de la estructura del semáforo
 typedef struct {
     sem_t semaphore;
 } Semaphore;
 
-// Función para inicializar el semáforo
-void semaphore_init(Semaphore *s, int value);
+void semaphore_init(Semaphore *s, int initial_value);
 
-// Función para realizar una operación de espera en el semáforo
-void semaphore_wait(Semaphore *s);
+void semaphore_wait(Semaphore *sem);
 
-// Función para destruir el semáforo
-void semaphore_signal(Semaphore *s);
+void semaphore_signal(Semaphore *sem);
 
 
-#endif // BARRIER_H
+#endif // SEMAPHORE_H
