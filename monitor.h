@@ -1,6 +1,19 @@
 #ifndef MONITOR_H
 #define MONITOR_H
 
+/*
+Instituto Tecnológico de Costa Rica | Ing. Computación
+
+Sistemas Operativos - Tarea #2
+
+Elaborado Por:
+Adrián Herrera
+Rebeca Madrigal
+Ronaldo Vindas
+
+*/
+
+
 typedef struct {
     int occupied;
     int wait_count;
