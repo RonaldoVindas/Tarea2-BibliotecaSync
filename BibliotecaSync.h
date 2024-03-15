@@ -17,6 +17,6 @@ Ronaldo Vindas
 
 //#include "semaphore.h"
 #include "barrier.h"
-//#include "monitor.h"
+#include "monitor.h"
 
 #endif // SYNC_H
