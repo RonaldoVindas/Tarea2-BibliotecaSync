@@ -28,11 +28,8 @@ void semaphore_init(Semaphore *s, int value);
 // Función para realizar una operación de espera en el semáforo
 void semaphore_wait(Semaphore *s);
 
-// Función para realizar una operación de notificación en el semáforo
-void semaphore_notify(Semaphore *s);
-
 // Función para destruir el semáforo
-void semaphore_destroy(Semaphore *s);
+void semaphore_signal(Semaphore *s);
 
 
 #endif // BARRIER_H
