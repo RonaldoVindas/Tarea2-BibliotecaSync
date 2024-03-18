@@ -41,39 +41,3 @@ void semaphore_signal(semaphore* sem) {
     pthread_cond_signal(&(sem->condition));
     pthread_mutex_unlock(&(sem->mutex));
 }
-
-void* thread_function(void* arg) {
-    semaphore* sem = (semaphore*)arg;
-
-    printf("Thread waiting\n");
-    semaphore_wait(sem);
-
-    printf("Thread acquired the semaphore\n");
-
-    printf("Thread releasing the semaphore\n");
-    semaphore_signal(sem);
-
-    return NULL;
-}
-
-int main() {
-    semaphore sem;
-    semaphore_init(&sem, 1);
-
-    pthread_t thread;
-    pthread_create(&thread, NULL, thread_function, (void*)&sem);
-
-    printf("Main thread performing some work\n");
-
-    printf("Main thread waiting\n");
-    semaphore_wait(&sem);
-
-    printf("Main thread acquired the semaphore\n");
-
-    printf("Main thread releasing the semaphore\n");
-    semaphore_signal(&sem);
-
-    pthread_join(thread, NULL);
-
-    return 0;
-}

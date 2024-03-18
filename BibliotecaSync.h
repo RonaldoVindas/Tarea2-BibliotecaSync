@@ -15,8 +15,8 @@ Ronaldo Vindas
 */
 
 
-//#include "semaphore.h"
-//#include "barrier.h"
+#include "semaphore.h"
+#include "barrier.h"
 #include "monitor.h"
 
 
