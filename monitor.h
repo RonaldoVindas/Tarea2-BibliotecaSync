@@ -28,6 +28,6 @@ void monitor_enter(Monitor *monitor);
 void monitor_exit(Monitor *monitor);
 void monitor_wait(Monitor *monitor);
 void monitor_notify(Monitor *monitor);
-
+void monitor_destroy(Monitor *monitor);
 #endif /* MONITOR_H */
 
