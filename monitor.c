@@ -1,3 +1,4 @@
+
 /*
 Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
 
@@ -34,6 +35,11 @@ void monitor_notify(Monitor *monitor) {
 }
 
 void monitor_destroy(Monitor *monitor) {
+
     pthread_mutex_destroy(&(monitor->mutex));       //Libera el mutex
     pthread_cond_destroy(&(monitor->cond_var));     //Libera la variable de condición
+
+    pthread_mutex_destroy(&(monitor->mutex)); 
+    pthread_cond_destroy(&(monitor->cond_var)); 
+
 }
