@@ -1,10 +1,5 @@
-#ifndef MONITOR_H
-#define MONITOR_H
-
-#include <pthread.h>
-
 /*
-Instituto Tecnológico de Costa Rica | Ing. Computación
+Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
 
 Sistemas Operativos - Tarea #2
 
@@ -14,6 +9,11 @@ Rebeca Madrigal
 Ronaldo Vindas
 
 */
+
+#ifndef MONITOR_H
+#define MONITOR_H
+
+#include <pthread.h>
 
 
 

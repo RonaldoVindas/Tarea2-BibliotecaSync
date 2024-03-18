@@ -1,7 +1,5 @@
-#include "barrier.h"
-
 /*
-Instituto Tecnológico de Costa Rica | Ing. Computación
+Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
 
 Sistemas Operativos - Tarea #2
 
@@ -11,6 +9,8 @@ Rebeca Madrigal
 Ronaldo Vindas
 
 */
+
+#include "barrier.h"
 
 
 void barrier_init(Barrier* barrier, int max_count) {

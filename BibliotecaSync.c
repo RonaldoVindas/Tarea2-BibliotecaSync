@@ -1,3 +1,15 @@
+/*
+Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
+
+Sistemas Operativos - Tarea #2
+
+Elaborado Por:
+Adrián Herrera
+Rebeca Madrigal
+Ronaldo Vindas
+
+*/
+
 #include <stdio.h>
 #include <pthread.h>
 #include "BibliotecaSync.h"
@@ -8,7 +20,19 @@
 Monitor monitor;
 int contador = 0;
 
-void *incrementar(void *arg) {
+/*
+Probar Barrera
+*/
+
+/*
+Probar Monitor
+*/
+
+/*
+Probar Semáforo
+*/
+
+/*   void *incrementar(void *arg) {
     int thread_index = *(int *)arg;
     for (int i = 0; i < NUM_ITERATIONS; i++) {
         monitor_enter(&monitor);
@@ -31,5 +55,5 @@ int main() {
         pthread_join(threads[i], NULL);
     }
 
-    return 0;
-}
+    return 0;               
+}      */

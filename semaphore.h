@@ -1,12 +1,5 @@
-#ifndef SEMAPHORE_H
-#define SEMAPHORE_H
-
-#include <pthread.h>
-#include <semaphore.h>
-
 /*
-
-Instituto Tecnológico de Costa Rica | Ing. Computación
+Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
 
 Sistemas Operativos - Tarea #2
 
@@ -16,6 +9,14 @@ Rebeca Madrigal
 Ronaldo Vindas
 
 */
+
+#ifndef SEMAPHORE_H
+#define SEMAPHORE_H
+
+#include <pthread.h>
+#include <semaphore.h>
+
+
 
 typedef struct {
     sem_t semaphore;

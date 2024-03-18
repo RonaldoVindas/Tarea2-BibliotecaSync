@@ -1,9 +1,5 @@
-#include "semaphore.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /*
-Instituto Tecnológico de Costa Rica | Ing. Computación
+Instituto Tecnológico de Costa Rica | Ing. Computación | Semestre 1 - 2024
 
 Sistemas Operativos - Tarea #2
 
@@ -13,6 +9,11 @@ Rebeca Madrigal
 Ronaldo Vindas
 
 */
+
+#include "semaphore.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 
 typedef struct {
     pthread_mutex_t mutex;
