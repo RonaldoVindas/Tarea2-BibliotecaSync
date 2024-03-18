@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
-#include "C:\Users\XPC\Desktop\Tarea2-BibliotecaSync\BibliotecaSync.h" // Incluye el archivo de encabezado de la biblioteca que contiene todas las estructuras de sincronización
+#include "C:\Users\XPC\Desktop\Tarea2-BibliotecaSync\BibliotecaSync.h" 
 
 #define NUM_THREADS 5
 

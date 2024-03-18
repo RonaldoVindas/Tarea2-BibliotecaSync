@@ -10,7 +10,6 @@ Ronaldo Vindas
 
 */
 
-// semaphore.c
 
 #include "semaphore.h"
 #include <stdlib.h>
