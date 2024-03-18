@@ -14,7 +14,7 @@ Ronaldo Vindas
 #define SYNC_H
 
 
-#include "semaphore.h"
+//#include "semaphore.h"
 #include "barrier.h"
 #include "monitor.h"
 

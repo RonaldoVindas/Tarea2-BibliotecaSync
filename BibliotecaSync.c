@@ -14,11 +14,11 @@ Ronaldo Vindas
 #include <pthread.h>
 #include "BibliotecaSync.h"
 
-#define NUM_THREADS 2
-#define NUM_ITERATIONS 5
+//#define NUM_THREADS 2
+//#define NUM_ITERATIONS 5
 
-Monitor monitor;
-int contador = 0;
+//Monitor monitor;
+//int contador = 0;
 
 /*
 Probar Barrera
