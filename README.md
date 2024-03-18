@@ -30,7 +30,9 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
 3. Inicialización de Estructuras: Se deben inicializar las estructuras de sincronización antes de su uso:
    -En el caso de Monitor:
      ```
-      CódigoEjemplo
+      Monitor monitor;
+      monitor_init(&monitor);
+
      ```    
    -En el caso de Barrera:
       ```
@@ -47,7 +49,12 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
 
    -En el caso de Monitor:
      ```
-      CódigoEjemplo
+      monitor_enter(&monitor); //Esta dentro del hilo
+      // Acceso al recurso compartido protegido por el monitor
+      // Un ejemplo es la actualización de una variable compartida
+      contador++;
+      monitor_exit(&monitor);
+      /*Resto del código después del hilo*/
      ```    
    -En el caso de Barrera:
       ```
@@ -68,7 +75,7 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
 
    -En el caso de Monitor:
      ```
-      CódigoEjemplo
+      monitor_destroy(&monitor); // Destruye la estructura del monitor y liberar cualquier recurso asociado
      ```    
    -En el caso de Barrera:
       ```

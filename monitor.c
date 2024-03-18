@@ -20,3 +20,8 @@ void monitor_wait(Monitor *monitor) {
 void monitor_notify(Monitor *monitor) {
     pthread_cond_signal(&(monitor->cond_var));
 }
+
+void monitor_destroy(Monitor *monitor) {
+    pthread_mutex_destroy(&(monitor->mutex)); // Liberar el mutex
+    pthread_cond_destroy(&(monitor->cond_var)); // Liberar la variable de condición
+}
