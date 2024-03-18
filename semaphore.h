@@ -10,23 +10,21 @@ Ronaldo Vindas
 
 */
 
+
 #ifndef SEMAPHORE_H
 #define SEMAPHORE_H
 
 #include <pthread.h>
-#include <semaphore.h>
-
-
 
 typedef struct {
-    sem_t semaphore;
+    int value;
+    pthread_mutex_t mutex;
+    pthread_cond_t condition;
 } Semaphore;
 
-void semaphore_init(Semaphore *s, int initial_value);
-
-void semaphore_wait(Semaphore *sem);
-
-void semaphore_signal(Semaphore *sem);
-
+Semaphore* createSemaphore(int initialValue);
+void destroySemaphore(Semaphore* semaphore);
+void waitSemaphore(Semaphore* semaphore);
+void signalSemaphore(Semaphore* semaphore);
 
 #endif // SEMAPHORE_H
