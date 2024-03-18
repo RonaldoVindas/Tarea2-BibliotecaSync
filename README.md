@@ -41,7 +41,8 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
     
    -En el caso de Semáforo:
       ```
-      CódigoEjemplo
+      Semaphore semaforo;
+      void semaphore_init(Semaphore *s, int initial_value);
       ```
 4. Uso de funciones de la Biblioteca: Tras inicializar la estructura, es posible controlar la concurrencia mediante el uso de funciones.
 
@@ -58,7 +59,8 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
     
    -En el caso de Semáforo:
       ```
-      CódigoEjemplo
+      semaphore_wait(semaphore* sem);          //Permite hacer esperar un hilo en el semáforo.
+      /*Resto del código después del semáforo*/
       ```
 
 
@@ -72,13 +74,13 @@ Para hacer uso de está biblioteca debe seguir los siguientes pasos al crear un 
      ```    
    -En el caso de Barrera:
       ```
-      barrier_destroy(&barrier);          //Permite hacer esperar un hilo en la barrera.
+      barrier_destroy(&barrier);          
       ```
 
     
    -En el caso de Semáforo:
       ```
-      CódigoEjemplo
+      void semaphore_signal(Semaphore *sem);
       ```
 
      
